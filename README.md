@@ -93,7 +93,7 @@ first_order_for_each_user = []
 
 people = [
   {
-      name: 'Mana',
+      name: 'Maha',
       transactions: [
           {
               type: 'COFFEE',
