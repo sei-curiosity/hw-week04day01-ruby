@@ -29,6 +29,17 @@ upper_case_full_names = []
 
 ```rb
 
+ i=0
+  while i<students.length
+    upper_case_full_names.push("#{students[i][:first_name].upcase} #{students[i][:last_name].upcase}")
+    i=i+1
+  end
+  p upper_case_full_names
+
+```
+
+```rb
+
 [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
 
 ```
@@ -82,6 +93,16 @@ first_order_for_each_user = []
 
 ### Answer
 
+```rb
+
+  i=0
+  while i<users.length
+    first_order_for_each_user.push(users[i][:orders][0])
+    i=i+1
+  end
+  p first_order_for_each_user
+
+```
 ```rb
 
 [ {description: "a bike"}, {description: "bees"}, {description: "a MacBook"} ]
@@ -152,6 +173,38 @@ coffee_average_per_person = []
 ```
 
 ### Answer
+
+```rb
+ arr1=[]
+ arr2=[]
+ num=0
+ name=""
+ i=0;
+ j=0
+ count=0
+ people.each do |item|
+        while j<item[:transactions].length
+            if item[:transactions][j][:type]=="COFFEE"
+                num=num+ item[:transactions][j][:amount]
+                name=item[:name]
+                count+=1
+            end
+            j+=1        
+        end      
+        num = num / count
+        arr1.push(name)
+        arr2.push(num)
+        name=""
+        j=0
+        count=0
+        num=0
+ end
+while i<arr1.length
+    puts "name: #{arr1[i]}, coffee_average: #{arr2[i]}"
+    i+=1
+end
+
+```
 
 ```rb
 
@@ -230,6 +283,17 @@ Write an infinite loop that will make you add all the your friends in the studen
 
 ### Answer
 
+```rb
+student_names=[]
+continue="Y"
+while continue === "Y"
+    puts "add a student"
+    student_names.push(gets.chomp)
+    puts "Do you want to continue ? (y/n)"
+    continue=gets.chomp.upcase
+end
+puts student_names
+```
 ```
 
 >add a student
