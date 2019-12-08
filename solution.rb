@@ -35,6 +35,13 @@
     #   end
     #   p new_arr
     # ```
+
+    students.each do |i|
+        upper_case_full_names.push("#{i[:first_name].upcase} #{i[:last_name].upcase}")
+    end
+
+    p upper_case_full_names
+
     
     #####          Q2      ########
     users = [
@@ -97,6 +104,10 @@
     #   p first_order_for_each_user
     # ```
     
+    users.each do |element|
+       first_order_for_each_user.push(element[:orders][0])
+    end
+    p first_order_for_each_user
     
     #####          Q3      ########
     people = [
@@ -197,6 +208,17 @@
     
     # puts coffee_average_per_person
     # ```
+
+    people.each do |element|
+        counter = 0
+        total = 0
+        element[:transactions].each do |t|
+            total += t[:amount] if t[:type] == 'COFFEE'
+            counter += 1 if t[:type] == 'COFFEE'
+        end
+        coffee_average_per_person.push({name: element[:name], coffee_average: total/counter})
+    end
+    p coffee_average_per_person
     
     #####          Q4      ########
     stores = [
@@ -282,5 +304,21 @@
     
     # puts most_expensive_products_by_store
     # ```
+
+    most_expensive_products_by_store = []
+
+    stores.each do |store|
+        max = 0
+        most_expensive = {}
+        store[:products].each do |product|
+            if product[:price] > max
+                most_expensive = product
+                max = product[:price]
+            end
+        end
+        most_expensive_products_by_store.push({store_name:store[:store_name], most_expensive_product:most_expensive})
+    end
+    p most_expensive_products_by_store
+
     
     #######
