@@ -167,6 +167,7 @@
     #     total_amout = 0
     #     hash[:transactions].each do |key,value|  ##second loop for transcations [{},{},{}]
     #         if key[:type] == "COFFEE"
+    
     #             total_amout += key[:amount]
     #             counter += 1
     #         end
