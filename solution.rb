@@ -2,22 +2,22 @@
     #####          Q1      ########
     students = [
         {
-            first_name: 'Ahmed',
-            last_name: 'Althagafi'
+            first_name: 'John',
+            last_name: 'Doe'
         },
         {
-            first_name: 'Norah',
-            last_name: 'Alshehri',
+            first_name: 'Jane',
+            last_name: 'Doe',
         },
         {
-            first_name: 'Haneen',
-            last_name: 'Alghamdi',
+            first_name: 'Jennifer',
+            last_name: 'Aniston',
         }
       ]
       
       upper_case_full_names = []
     
-      ## [ 'AHMED ALTHAGAFI', 'NORAH ALSHEHRI', 'HANEEN ALGHAMDI' ]
+      ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
     # Q_1
     #   ```
@@ -39,7 +39,7 @@
     #####          Q2      ########
     users = [
         {
-            name: 'Salman',
+            name: 'Ahmed',
             orders: [
                 {
                     description: 'a bike'
@@ -47,7 +47,7 @@
             ]
         },
         {
-            name: 'Saeed',
+            name: 'Sami',
             orders: [
                 {
                     description: 'bees'
@@ -58,7 +58,7 @@
             ]
         },
         {
-            name: 'Danyah',
+            name: 'Salman',
             orders: [
                 {
                     description: 'a MacBook'
@@ -101,7 +101,7 @@
     #####          Q3      ########
     people = [
         {
-            name: 'Jawaher',
+            name: 'Maha',
             transactions: [
                 {
                     type: 'COFFEE',
@@ -118,7 +118,7 @@
             ]
         },
         {
-            name: 'Nader',
+            name: 'Salman',
             transactions: [
                 {
                     type: 'BIKES',
@@ -135,7 +135,7 @@
             ]
         },
         {
-            name: 'Samah',
+            name: 'Sami',
             transactions: [
                 {
                     type: 'COFFEE',
