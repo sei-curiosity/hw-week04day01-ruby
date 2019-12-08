@@ -159,9 +159,9 @@
     # Q_3
     # ```
     #   #######The solution by using .each loop#######
-    # people.each do |hash|  ##first loop for hash 
-    #     new_person = {name:"",coffee_average:0}
-    #     new_person[:name] = hash[:name]
+    people.each do |hash|  ##first loop for hash 
+        new_person = {name:"",coffee_average:0}
+        new_person[:name] = hash[:name]
     #     puts hash[:name]
     #     counter = 0
     #     total_amout = 0

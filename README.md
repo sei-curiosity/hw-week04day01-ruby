@@ -25,8 +25,10 @@ upper_case_full_names = []
 
 ```
 
-### Answer
-
+new_arr = students.map do |element|
+            element[:first_name].upcase + " " + element[:last_name].upcase
+        end
+        p new_arr
 ```rb
 
 [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
@@ -80,7 +82,11 @@ first_order_for_each_user = []
 
 ```
 
-### Answer
+first_order_for_each_user = []
+users.each do |element|
+    element[:orders].first
+  end
+  p first_order_for_each_user
 
 ```rb
 
@@ -151,7 +157,13 @@ coffee_average_per_person = []
 
 ```
 
-### Answer
+coffee_average_per_person = []
+
+people.each do |element|
+    element[:amount] <!-- the general idea not exactly  -->
+end
+p coffee_average_per_person
+
 
 ```rb
 
