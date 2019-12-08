@@ -16,7 +16,8 @@
       ]
       
       upper_case_full_names = []
-    
+      
+      
       ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
     # Q_1
