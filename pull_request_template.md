@@ -1,5 +1,5 @@
 ### How difficult did you find this (0 - 10)? (0 very easy, 10 very difficult)
-
+6
 
 ### How long did it take?
 

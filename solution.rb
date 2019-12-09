@@ -35,7 +35,15 @@
     #   end
     #   p new_arr
     # ```
-    
+        #####          A1      ########
+
+    students.each do |i|
+    upper_case_full_names.push("#{i[:first_name].upcase} #{i[:last_name].upcase}")
+    end
+    puts upper_case_full_names
+
+
+
     #####          Q2      ########
     users = [
         {
@@ -78,7 +86,12 @@
       
       first_order_for_each_user = []
     
-    
+          #####          A2      ########
+
+    users.each do |element|
+    first_order_for_each_user.push(element[:orders][0])
+     end
+     puts first_order_for_each_user
     
     # Q_2
     # ```
@@ -154,8 +167,21 @@
       ]
       
       
-      coffee_average_per_person = []
+    coffee_average_per_person = []
+
+        #####          A3      ########
+
     
+    people.each do |element|
+    counter = 0
+    total = 0
+    element[:transactions].each do |t|
+    total += t[:amount] if t[:type] == 'COFFEE'
+    counter += 1 if t[:type] == 'COFFEE'
+    end
+    coffee_average_per_person.push({name: element[:name], coffee_average: total/counter})
+    end
+    puts coffee_average_per_person
     # Q_3
     # ```
     #   #######The solution by using .each loop#######
@@ -284,3 +310,19 @@
     # ```
     
     #######
+
+        #####          A4      ########
+
+    most_expensive_products_by_store = []
+    stores.each do |store|
+    max = 0
+    most_expensive = {}
+    store[:products].each do |product|
+    if product[:price] > max
+    most_expensive = product
+    max = product[:price]
+    end
+    end
+    most_expensive_products_by_store.push({store_name:store[:store_name], most_expensive_product:most_expensive})
+    end
+    puts most_expensive_products_by_store
