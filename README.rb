@@ -1,10 +1,9 @@
-<!-- # Ruby HW
+ # Ruby HW
 
-![ARRAYS](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWBMdo6Ac3moY3tPnzMsFVnOscOR03SxkZ4sPGGhsWoQrYMPZ9g)
+# ![ARRAYS](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVWBMdo6Ac3moY3tPnzMsFVnOscOR03SxkZ4sPGGhsWoQrYMPZ9g)
 
 ## 1. Return an array of each Student's full name, upper-cased -->
-<!-- 
-```rb -->
+
 
 students = [
   {
@@ -20,24 +19,24 @@ students = [
       last_name: 'Aniston',
   }
 ]
-
-upper_case_full_names = []
-studends[:first_name]+[:last_name]
+puts students.keys
 
 
-```
 
-<!-- ### Answer
 
-```rb
 
-[ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ] -->
+# upper_case_full_names = []
 
-```
 
-## 2. Find the first order for each user
 
-```rb
+# <!-- ### Answer
+
+# # ```rb
+
+# # [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ] -->
+
+# ## 2. Find the first order for each user
+
 
 users = [
   {
@@ -80,18 +79,18 @@ users = [
 
 first_order_for_each_user = []
 
-```
+# ```
 
-### Answer
+# # ### Answer
 
-```rb
+# # ```rb
 
 [ {description: "a bike"}, {description: "bees"}, {description: "a MacBook"} ]
-```
 
-## 3. Find the average amount spent on coffee, per transaction, for each person
+##3. Find the average amount spent on coffee, per transaction, for each person
 
-```rb
+
+
 
 people = [
   {
@@ -151,11 +150,11 @@ people = [
 
 coffee_average_per_person = []
 
-```
+# ```
 
-### Answer
+# ### Answer
 
-```rb
+# ```rb
 
 [ 
   {name: "Maha", :coffee_average=>5.93}, 
@@ -163,11 +162,11 @@ coffee_average_per_person = []
   {name: "Sami", :coffee_average=>37.28666666666667} 
 ]
 
-```
+
 
 ## 4. Find the most expensive product for each store, with the store name:
 
-```rb
+# ```rb
 
 stores = [
   {
@@ -213,35 +212,32 @@ stores = [
 
 most_expensive_products_by_store = []
 
-```
 
 ### Answer
 
-```rb
+# ```rb
 
 [ 
   {store_name: "Jarir", most_expensive_product: { description: "Titanium", price: 9384.33}},
   {store_name: "Danub", most_expensive_product: { description: "Silver", price: 654.44}},
   {store_name: "Souq", most_expensive_product: { description: "Sapphire", price: 899.33}}
 ]
-```
+
 
 # Bonus
 
-Write an infinite loop that will make you add all the your friends in the students list and after each add will ask if you want to quit the loop (yes/no) if the user choose no print all the students array
+# Write an infinite loop that will make you add all the your friends in the students list and after each add will ask if you want to quit the loop (yes/no) if the user choose no print all the students array
 
 ### Answer
 
-```
+# >add a student
+# Bill Cosby
+# >Do you want to continue ? (y/n)
+# y
+# >add a student
+# Stefan King
+# >Do you want to continue ? (y/n)
+# y
+# >add a student
 
->add a student
-Bill Cosby
->Do you want to continue ? (y/n)
-y
->add a student
-Stefan King
->Do you want to continue ? (y/n)
-y
->add a student
-
-```
+# ```
