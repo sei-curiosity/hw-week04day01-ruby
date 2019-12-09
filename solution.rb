@@ -22,10 +22,12 @@
     # Q_1
     #   ```
     #   ########The solution by using map method#######
-        new_arr = students.map do |element|
-            element[:first_name.uppercase] + " " + element[:last_name.uppercase]
-            p new_arr.uppercase
+
+        students.each do |x|
+            upper_case_full_names.push("#{x[:first_name].upcase} #{x[:last_name].upcase}")
         end
+    
+        p upper_case_full_names
     #   ```
     #   ```
     #   #######The solution by using .each loop#######
@@ -88,7 +90,9 @@
     #   end
     #   puts first_order_for_each_user
     #   ```
-    
+    users.length.times do |index|
+    puts users[index][:orders][0]  
+    end
     #   ```
     #   #The solution by using .each loop
     #   users.each do |element|
@@ -177,7 +181,16 @@
     
     #   p coffee_average_per_person
     #   ```
-    
+    people.each do |element|
+        counter = 0
+        total = 0
+        element[:transactions].each do |i|
+            total += i[:amount] if i[:type] == 'COFFEE'
+            counter += 1 if i[:type] == 'COFFEE'
+        end
+        coffee_average_per_person.push({name: element[:name], coffee_average: total/counter})
+    end
+    p coffee_average_per_person
     # ```
     #  #######The solution by using map method#######
     # coffee_average_per_person = people.map do |person|
@@ -282,5 +295,18 @@
     
     # puts most_expensive_products_by_store
     # ```
-    
+    most_expensive_products_by_store = []
+
+    stores.each do |store|
+        max = 0
+        most_expensive = {}
+        store[:products].each do |product|
+            if product[:price] > max
+                most_expensive = product
+                max = product[:price]
+            end
+        end
+        most_expensive_products_by_store.push({store_name:store[:store_name], most_expensive_product:most_expensive})
+    end
+    p most_expensive_products_by_store
     #######
