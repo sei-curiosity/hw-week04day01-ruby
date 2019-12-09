@@ -25,7 +25,10 @@ upper_case_full_names = []
 
 ```
 
-### Answer
+ new_arr = students.map do |element|
+            element[:first_name] + " " + element[:last_name]
+        end
+        p new_arr
 
 ```rb
 
@@ -80,7 +83,10 @@ first_order_for_each_user = []
 
 ```
 
-### Answer
+ first_order_for_each_user = users.map do |order|
+        "#{order[:orders].first}"
+      end
+      puts first_order_for_each_user
 
 ```rb
 
@@ -151,7 +157,23 @@ coffee_average_per_person = []
 
 ```
 
-### Answer
+people.each do |hash|  ##first loop for hash 
+        new_person = {name:"",coffee_average:0}
+        new_person[:name] = hash[:name]
+        puts hash[:name]
+        counter = 0
+        total_amout = 0
+        hash[:transactions].each do |key,value|  ##second loop for transcations [{},{},{}]
+            if key[:type] == "COFFEE"
+                total_amout += key[:amount]
+                counter += 1
+            end
+        end
+        new_person[:coffee_average] = total_amout / counter
+        coffee_average_per_person.push(new_person)
+      end
+    
+      p coffee_average_per_person
 
 ```rb
 
@@ -213,7 +235,24 @@ most_expensive_products_by_store = []
 
 ```
 
-### Answer
+ most_expensive_products_by_store = []
+    
+    stores.each do |hash|
+        new_store_with_expensive_product = {store_name:"",most_expensive_product:{}}
+        expensive_product = {description:"",price:0}
+    
+        new_store_with_expensive_product[:store_name] = hash[:store_name]
+        hash[:products].each do |hash_products|
+            if hash_products[:price] > expensive_product[:price]
+                expensive_product[:price] = hash_products[:price]
+                expensive_product[:description] = hash_products[:description]
+            end
+        end
+        new_store_with_expensive_product[:most_expensive_product] = expensive_product
+        most_expensive_products_by_store.push(new_store_with_expensive_product) 
+    end
+    
+    puts most_expensive_products_by_store
 
 ```rb
 
