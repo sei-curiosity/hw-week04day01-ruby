@@ -16,6 +16,13 @@
       ]
       
       upper_case_full_names = []
+
+############
+  upper_case_full_names = students.map do |x|
+    x[:first_name].upcase + " " + x[:last_name].upcase
+
+  end
+p upper_case_full_names
     
       ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
@@ -78,7 +85,12 @@
       
       first_order_for_each_user = []
     
-    
+      #########
+      irst_order_for_each_user = users.map do |x|  
+
+        x[:orders][0]
+   end
+   p first_order_for_each_user
     
     # Q_2
     # ```
@@ -155,7 +167,10 @@
       
       
       coffee_average_per_person = []
+      ################
     
+
+
     # Q_3
     # ```
     #   #######The solution by using .each loop#######
@@ -240,6 +255,13 @@
             ]
         }
       ]
+      
+
+
+      #################
+
+
+
       
       
     # Q_4
