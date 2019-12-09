@@ -78,7 +78,10 @@ users = [
   }
 ]
 
-first_order_for_each_user = []
+first_order_for_each_user = users.map do |i|
+i[:orders][0]
+end
+p first_order_for_each_user
 
 ```
 
