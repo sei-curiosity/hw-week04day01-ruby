@@ -200,9 +200,10 @@ coffee_average_per_person = []
         num=0
  end
 while i<arr1.length
-    puts "name: #{arr1[i]}, coffee_average: #{arr2[i]}"
-    i+=1
-end
+    coffee_average_per_person.push("name: #{arr1[i]}, coffee_average: #{arr2[i]}")
+      i+=1
+  end
+  puts coffee_average_per_person
 
 
 ```
