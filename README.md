@@ -25,7 +25,10 @@ upper_case_full_names = []
 
 ```
 
-### Answer
+new_arr = students.map do |element|
+element[:first_name].upcase + " " + element[:last_name].upcase
+end
+p new_arr
 
 ```rb
 
@@ -81,6 +84,10 @@ first_order_for_each_user = []
 ```
 
 ### Answer
+first_order_for_each_user = users.map do |order|
+order[:orders][0]
+end
+puts first_order_for_each_user
 
 ```rb
 
@@ -152,7 +159,19 @@ coffee_average_per_person = []
 ```
 
 ### Answer
-
+    coffee_average_per_person = people.map do |person|
+        coffee_sum = []
+        person[:transactions].map do |transaction|
+            if transaction[:type] == 'COFFEE'
+            coffee_sum.push(transaction[:amount])
+            end
+        end 
+        { 
+        name: person[:name] , 
+        coffee_average: coffee_sum.reduce(:+) / coffee_sum.length 
+        }
+    end
+    puts coffee_average_per_person
 ```rb
 
 [ 

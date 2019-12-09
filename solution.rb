@@ -2,16 +2,16 @@
     #####          Q1      ########
     students = [
         {
-            first_name: 'John',
-            last_name: 'Doe'
+            first_name: "John",
+            last_name: "Doe"
         },
         {
-            first_name: 'Jane',
-            last_name: 'Doe',
+            first_name: "Jane",
+            last_name: "Doe",
         },
         {
-            first_name: 'Jennifer',
-            last_name: 'Aniston',
+            first_name: "Jennifer",
+            last_name: "Aniston",
         }
       ]
       
@@ -20,21 +20,23 @@
       ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
     # Q_1
-    #   ```
-    #   ########The solution by using map method#######
-    #     new_arr = students.map do |element|
-    #         element[:first_name] + " " + element[:last_name]
-    #     end
-    #     p new_arr
-    #   ```
-    #   ```
-    #   #######The solution by using .each loop#######
-    #   new_arr = [] ##create new empty array
+     # ```
+      ########The solution by using map method#######
+      #!
+        new_arr = students.map do |element|
+        element[:first_name].upcase + ' ' + element[:last_name].upcase
+        end
+        p new_arr
+     # ```
+      #```
+      #######The solution by using .each loop#######
+      ##create new empty array
+    #   new_arr = []
     #   students.each do |element|
     #     upper_case_full_names.push(element.first_name.upcase + " " + element.last_name.upcase)
     #   end
     #   p new_arr
-    # ```
+   # ```
     
     #####          Q2      ########
     users = [
@@ -82,19 +84,20 @@
     
     # Q_2
     # ```
-    #   #######The solution by using map method#######
-    #   first_order_for_each_user = users.map do |order|
-    #     "#{order[:orders].first}"
-    #   end
-    #   puts first_order_for_each_user
+      #######The solution by using map method#######
+      #!
+    #  first_order_for_each_user = users.map do |order|
+    #  order[:orders][0]
+    #  end
+    #  puts first_order_for_each_user
     #   ```
     
     #   ```
     #   #The solution by using .each loop
-    #   users.each do |element|
-    #     first_order_for_each_user.push(element[:orders].first)
-    #   end
-    #   p first_order_for_each_user
+    # users.each do |element|
+    # first_order_for_each_user.push(element[:orders][0])
+    # end
+    # p first_order_for_each_user
     # ```
     
     
@@ -180,12 +183,12 @@
     
     # ```
     #  #######The solution by using map method#######
+    #!
     # coffee_average_per_person = people.map do |person|
-    
     #     coffee_sum = []
     #     person[:transactions].map do |transaction|
     #         if transaction[:type] == 'COFFEE'
-    #             coffee_sum.push(transaction[:amount])
+    #         coffee_sum.push(transaction[:amount])
     #         end
     #     end
         
@@ -201,40 +204,40 @@
     #####          Q4      ########
     stores = [
         {
-            store_name: 'Jarir',
+            store_name: "Jarir",
             products: [
                 {
-                    description: 'Titanium',
+                    description: "Titanium",
                     price: 9384.33
                 },
                 {
-                    description: 'Gold',
+                    description: "Gold",
                     price: 345.54
                 }
             ]
         },
         {
-            store_name: 'Danub',
+            store_name: "Danub",
             products: [
                 {
-                    description: 'Silver',
+                    description: "Silver",
                     price: 654.44
                 },
                 {
-                    description: 'Ruby',
+                    description: "Ruby",
                     price: 323.43
                 }
             ]
         },
         {
-            store_name: 'Souq',
+            store_name: "Souq",
             products: [
                 {
-                    description: 'Opal',
+                    description: "Opal",
                     price: 345.43
                 },
                 {
-                    description: 'Sapphire',
+                    description: "Sapphire",
                     price: 899.33
                 }
             ]
