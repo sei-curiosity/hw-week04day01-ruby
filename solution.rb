@@ -15,7 +15,11 @@
         }
       ]
       
-      upper_case_full_names = []
+      upper_case_full_names = students.map do |element|
+        element[:first_name].upcase+" "+element[:last_name].upcase
+      end
+    
+        puts upper_case_full_names
     
       ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
@@ -77,6 +81,11 @@
       ]
       
       first_order_for_each_user = []
+      first_order_for_each_user = users.map do |order|
+        "#{order[:orders].first}"
+      end
+      puts first_order_for_each_user
+
     
     
     
@@ -155,6 +164,24 @@
       
       
       coffee_average_per_person = []
+      people.each do |hash|
+        new_person = {name:"", coffe_average:0}
+        new_person[:name] = hash[:name]
+        puts hash[:name]
+        counter = 0
+        total_amount = 0
+        hash[:transactions].each do |key,value|
+            if key[:type] == "COFFEE"
+                total_amount += key[:amount]
+                counter +=1
+        end
+      end
+      new_person[:coffe_average] = total_amount / counter
+      coffee_average_per_person.push(new_person)
+    end
+    puts coffee_average_per_person
+
+
     
     # Q_3
     # ```
@@ -240,6 +267,23 @@
             ]
         }
       ]
+      most_expensive_products_by_store = []
+      stores.each do |store|
+        new_store_with_expensive_product = {store_name:"", most_expensive_product:{}}
+        expensive_product = {description:"", price:0}
+
+        new_store_with_expensive_product[:store_name] = store[:store_name]
+        store[:products] do |store_products|
+            if store_products[:price] > expensive_product[:price]
+                expensive_product[:price] = store_products[:price]
+                exprnsive_product[:description] = store_products[:description]
+            end
+        end
+        new_store_with_expensive_product[:most_expensive_product] = expensive_product
+        most_expensive_products_by_store.push(new_store_with_expensive_product)
+      end
+      puts most_expensive_products_by_store
+
       
       
     # Q_4
