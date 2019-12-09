@@ -22,10 +22,10 @@
     # Q_1
     #   ```
     #   ########The solution by using map method#######
-    #     new_arr = students.map do |element|
-    #         element[:first_name] + " " + element[:last_name]
-    #     end
-    #     p new_arr
+        new_arr = students.map do |element|
+            element[:first_name.uppercase] + " " + element[:last_name.uppercase]
+            p new_arr.uppercase
+        end
     #   ```
     #   ```
     #   #######The solution by using .each loop#######
