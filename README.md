@@ -204,6 +204,7 @@ while i<arr1.length
     i+=1
 end
 
+
 ```
 
 ```rb
@@ -267,6 +268,42 @@ most_expensive_products_by_store = []
 ```
 
 ### Answer
+```rb
+
+ greater="";
+  j=0
+  i=0
+  arr1=[]
+  arr2=[]
+  num1=0
+  num2=0
+  most_expensive_products_by_store = []
+
+
+    arr1 = stores.map do |item|
+     item[:store_name]
+    end
+  
+ stores.each_index do |i|
+          while j<1
+            num1=stores[i][:products][j][:price]
+            num2=stores[i][:products][j+1][:price]
+          if num1 > num2
+              arr2.push(stores[i][:products][j])
+          else
+              arr2.push(stores[i][:products][j+1])
+             end
+      j+=1
+end
+j=0
+end
+while i<arr1.length
+most_expensive_products_by_store.push("store_name: #{arr1[i]}, most_expensive_product: #{arr2[i]}")
+i+=1
+end
+puts most_expensive_products_by_store
+
+```
 
 ```rb
 
