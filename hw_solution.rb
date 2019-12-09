@@ -135,12 +135,12 @@ people = [
 ava_trans =[]
 people.each do |a|  
     sum =0  # this is an array of arrays of hashes
+    puts a[:name]
    a[:transactions].each do |t|
-   
-    puts sum += t[:amount]
-  
+    
+    puts sum  += t[:amount]
    end
-   puts sum.a 
+   puts "sum #{sum/3}"
   end
   puts ava_trans
 
