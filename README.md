@@ -21,8 +21,10 @@ students = [
   }
 ]
 
-upper_case_full_names = []
-
+upper_case_full_names = students.map do |i|
+i[:first_name].upcase + " " + i[:last_name].upcase
+end 
+p upper_case_full_names
 ```
 
 ### Answer
