@@ -14,9 +14,11 @@
             last_name: 'Aniston',
         }
       ]
-      
-      upper_case_full_names = []
-    
+     new_arr  = students.map do |x|
+   x [:first_name].upcase + " " + x[:last_name].upcase
+     end
+    p new_arr
+     
       ## [ 'JOHN DOE', 'JANE DOE', 'JENNIFER ANISTON' ]
     
     # Q_1
@@ -76,9 +78,13 @@
         }
       ]
       
-      first_order_for_each_user = []
     
     
+      first_order_for_each_user = users.map do |order|
+        "#{order[:orders].first}"
+      end
+      puts first_order_for_each_user
+          
     
     # Q_2
     # ```
@@ -152,9 +158,23 @@
             ]
         }
       ]
+      coffee_average = people.map do |person|
+    
+        coffee_sum = []
+        person[:transactions].map do |transaction|
+         if transaction[:type] == 'COFFEE'
+        coffee_sum.push(transaction[:amount])
+         end
+        end
+            
+            { 
+            name: person[:name] , 
+            coffee_average: coffee_sum.reduce(:+) / coffee_sum.length 
+            }
+        end
+        
+        puts coffee_average
       
-      
-      coffee_average_per_person = []
     
     # Q_3
     # ```
@@ -240,6 +260,19 @@
             ]
         }
       ]
+     most_expensive_products_by_store = []
+    most_expensive_products_by_store = stores.map do |store|
+        expensive = store[:products].max_by do |product|
+            product[:price]
+        end  
+    
+        {
+           name: store[:store_name] ,
+           price: expensive[:price]
+        }
+    end 
+    
+    puts most_expensive_products_by_store
       
       
     # Q_4
